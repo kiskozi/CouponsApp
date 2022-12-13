@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.webuni.android.advanced.coupons.ui.loginregistration.fragment.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_registrationFragment"
+            app:destination="@id/registrationFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_providersFragment"
+            app:destination="@id/providersFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/registrationFragment"
+        android:name="com.webuni.android.advanced.coupons.ui.loginregistration.fragment.RegistrationFragment"
+        android:label="fragment_registration"
+        tools:layout="@layout/fragment_registration" >
+        <action
+            android:id="@+id/action_registrationFragment_to_providersFragment"
+            app:destination="@id/providersFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/providersFragment"
+        android:name="com.webuni.android.advanced.coupons.ui.main.fragment.ProvidersFragment"
+        android:label="fragment_providers"
+        tools:layout="@layout/fragment_providers" >
+        <action
+            android:id="@+id/action_providersFragment_to_addProviderFragment"
+            app:destination="@id/addProviderFragment" />
+        <action
+            android:id="@+id/action_providersFragment_to_couponsFragment"
+            app:destination="@id/couponsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addProviderFragment"
+        android:name="com.webuni.android.advanced.coupons.ui.main.fragment.AddProviderFragment"
+        android:label="fragment_add_provider"
+        tools:layout="@layout/fragment_add_provider" >
+        <action
+            android:id="@+id/action_addProviderFragment_to_providersFragment"
+            app:destination="@id/providersFragment"
+            app:popUpTo="@id/providersFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/couponsFragment"
+        android:name="com.webuni.android.advanced.coupons.ui.main.fragment.CouponsFragment"
+        android:label="fragment_coupons"
+        tools:layout="@layout/fragment_coupons" >
+        <argument
+            android:name="providerUserID"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_couponsFragment_to_addCouponFragment"
+            app:destination="@id/addCouponFragment" />
+        <argument
+            android:name="couponCoID"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/addCouponFragment"
+        android:name="com.webuni.android.advanced.coupons.ui.main.fragment.AddCouponFragment"
+        android:label="fragment_add_coupon"
+        tools:layout="@layout/fragment_add_coupon" >
+        <action
+            android:id="@+id/action_addCouponFragment_to_couponsFragment"
+            app:destination="@id/couponsFragment"
+            app:popUpTo="@id/couponsFragment"
+            app:popUpToInclusive="true" />
+        <argument
+            android:name="couponCoID"
+            app:argType="string" />
+    </fragment>
+</navigation>

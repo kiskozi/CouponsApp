@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "581558264181",
+    "project_id": "coupons-88644",
+    "storage_bucket": "coupons-88644.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:581558264181:android:86c3056e5daff9adc0733c",
+        "android_client_info": {
+          "package_name": "com.webuni.android.advanced.coupons"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "581558264181-fqaf63dftf26dvugbmpmkjofbimaigou.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.webuni.android.advanced.coupons",
+            "certificate_hash": "c2e7d4ed5bf87dad81e194188de37e78a1c2ce2d"
+          }
+        },
+        {
+          "client_id": "581558264181-im9k41amp523dog2ulcj5jgvl8nvaoff.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAKVghGF4TKKxD-auyGmpfgDSGklNpErps"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "581558264181-im9k41amp523dog2ulcj5jgvl8nvaoff.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

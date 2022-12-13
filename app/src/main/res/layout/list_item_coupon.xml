@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="coupon"
+            type="com.webuni.android.advanced.coupons.data.Coupon" />
+        <variable
+            name="adapter"
+            type="com.webuni.android.advanced.coupons.ui.main.adapter.CouponAdapter" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvCouponItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="10dp"
+        card_view:cardBackgroundColor="@color/card_view_background"
+        card_view:cardCornerRadius="4dp"
+        card_view:cardElevation="4dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/image_view_background"
+                card_view:layout_constraintStart_toStartOf="parent"
+                card_view:layout_constraintTop_toTopOf="parent"
+                card_view:srcCompat="@drawable/ic_savings_64"
+                android:contentDescription="@string/iv_coupon_item_cd" />
+
+            <TextView
+                android:id="@+id/tvDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="@{coupon.description}"
+                tools:text="Hajvágás"
+                card_view:layout_constraintStart_toEndOf="@+id/imageView2"
+                card_view:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvDiscount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="@{@string/discount_text(coupon.discount)}"
+                tools:text="-25%"
+                card_view:layout_constraintStart_toEndOf="@+id/imageView2"
+                card_view:layout_constraintTop_toBottomOf="@+id/tvDescription" />
+
+            <TextView
+                android:id="@+id/tvAvailability"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:textSize="12sp"
+                android:text="@{coupon.availability}"
+                tools:text="2021.06.30."
+                card_view:layout_constraintBaseline_toBaselineOf="@+id/tvDiscount"
+                card_view:layout_constraintEnd_toEndOf="parent" />
+
+            <ImageView
+                android:id="@+id/ivDeleteCoupon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:focusable="true"
+                android:onClick="@{() -> adapter.deleteCoupon(coupon)}"
+                android:visibility="gone"
+                tools:visibility="visible"
+                card_view:layout_constraintEnd_toEndOf="parent"
+                card_view:layout_constraintTop_toTopOf="parent"
+                card_view:srcCompat="@drawable/ic_delete_24"
+                android:contentDescription="@string/iv_delete_cd" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</layout>

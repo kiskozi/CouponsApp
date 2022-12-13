@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">Coupons</string>
+    <string name="et_email_hint">Email</string>
+    <string name="et_password_hint">Password</string>
+    <string name="btn_login_text">Login</string>
+    <string name="dont_t_have_an_account">Don\'t have an account?</string>
+    <string name="tv_registration_text">Registration!</string>
+    <string name="et_name_hint">Name</string>
+    <string name="et_confirm_password_hint">Confirm Password</string>
+    <string name="switch_provider_text">Provider</string>
+    <string name="btn_registration_text">Registration and login</string>
+    <string name="btn_add_company_text">Add your company</string>
+    <string name="et_company_name_hint">Company name</string>
+    <string name="et_address_hint">Address</string>
+    <string name="btn_save_text">Save</string>
+    <string name="btn_add_coupon_text">Add your coupon</string>
+    <string name="et_description_hint">Description</string>
+    <string name="et_discount_hint">Discount</string>
+    <string name="et_availability_hint">Availability</string>
+    <string name="iv_coupon_item_cd">Coupon icon</string>
+    <string name="iv_delete_cd">Delete</string>
+    <string name="iv_company_icon_cd">Icon</string>
+    <string name="login_failed">Login failed! Please try again or register.</string>
+    <string name="registration_failed">Registration failed! Please try again.</string>
+    <string name="field_empty_error">This field can not be empty</string>
+    <string name="min_six_char_error">Minimum 6 characters is required!</string>
+    <string name="confirm_password_error">The confirmation password must match the password</string>
+    <string name="add_coupon_error">Coupon don\'t created!</string>
+    <string name="add_company_error">Company don\'t created!</string>
+
+    <string name="discount_text">-%1$s%%</string>
+
+</resources>
